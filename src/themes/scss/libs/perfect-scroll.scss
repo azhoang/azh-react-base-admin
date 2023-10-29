@@ -1,0 +1,51 @@
+// @import "perfect-scrollbar/css/perfect-scrollbar.css";
+.ps {
+  &--active {
+    &-x,
+    &-y {
+      & > .ps {
+        &__rail {
+          &-x,
+          &-y {
+            z-index: 3;
+            background-color: #f7f7f8;
+          }
+        }
+      }
+    }
+  }
+  &__rail{
+    &-x, &-y{
+      opacity: 1;
+    }
+  }
+  &__thumb {
+    &-x {
+      background-color: #fff;
+      border-radius: 0;
+      height: 8px;
+      bottom: 2px;
+      border: 1px solid #cbd5e0;
+    }
+    &-y {
+      background-color: #fff;
+      border-radius: 0;
+      width: 8px;
+      right: 2px;
+      border: 1px solid #cbd5e0;
+    }
+  }
+  &:hover,
+  &--focus,
+  &--scrolling-x,
+  --scrolling-y {
+    & > .ps {
+      &__rail {
+        &-x,
+        &-y {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
