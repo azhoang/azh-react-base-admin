@@ -1,0 +1,9 @@
+version: '3'
+services:
+  task-stepping-fe:
+    container_name: task-stepping-fe
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4001:4173"
